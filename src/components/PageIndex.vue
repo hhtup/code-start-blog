@@ -20,12 +20,13 @@ import IndexHeader from "@/views/IndexHeader.vue"
 <style scoped>
 .el-header {
   padding: 0;
-  background-color: #003366;
 }
 .el-footer {
-  background-color: #003366;
   height: 200px;
-  color: white;
   padding: 20px;
+}
+.el-footer {
+  background-color: var(--footer--bg--color);
+  color: var(--footer--font--color);
 }
 </style>

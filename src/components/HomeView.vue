@@ -26,8 +26,8 @@
     margin: 0 auto;
   }
   .main {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--main--bg--color);
+    color: var(--main--font--color);
     text-align: center;
     max-width: 800px;
     width:100%;

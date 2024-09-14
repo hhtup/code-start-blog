@@ -1,0 +1,49 @@
+:root {
+    /* 页面的背景颜色 */
+    --root--bg--color: #F0F8FF;
+    /* 页面的主体颜色 */
+    --main--bg--color: white;
+    /* 页面的字体颜色 */
+    --main--font--color: #1e1e1e;
+    /* 顶部导航栏背景颜色 */
+    --nav--bg--color: #F6F8FA;
+    /* 顶部导航栏字体颜色 */
+    --nav--font--color: #1e1e1e;
+    /* 侧边栏的背景颜色 */
+    --aside--bar--bg--color: var(--main--bg--color);
+    /* 侧边栏字体颜色 */
+    --aside--bar--font--color: var(--main--font--color);
+    /* 页面底栏背景颜色 */
+    --footer--bg--color: #434343;
+    /* 页面底栏字体颜色 */
+    --footer--font--color: #F6F8FA;
+    /* 文章背景色 */
+    --article--bg--color: white;
+    /* 文章字体颜色 */
+    --article--font--color: black;
+}
+
+.dark {
+    /* 页面的背景颜色 */
+    --root--bg--color: gray;
+    /* 页面的主体颜色 */
+    --main--bg--color: black;
+    /* 页面的字体颜色 */
+    --main--font--color: white;
+    /* 顶部导航栏背景颜色 */
+    --nav--bg--color: #003460;
+    /* 顶部导航栏字体颜色 */
+    --nav--font--color: #F6F8FA;
+    /* 侧边栏的背景颜色 */
+    --aside--bar--bg--color: var(--main--bg--color);
+    /* 侧边栏字体颜色 */
+    --aside--bar--font--color: var(--main--font--color);
+    /* 页面底栏背景颜色 */
+    --footer--bg--color: #ffadd2;
+    /* 页面底栏字体颜色 */
+    --footer--font--color: #520339;
+    /* 文章背景色 */
+    --article--bg--color: #1D1D1D;
+    /* 文章字体颜色 */
+    --article--font--color: white;
+}

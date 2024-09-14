@@ -1,6 +1,9 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import './assets/css/global.css'
+// import 'element-plus/theme-chalk/dark/css-vars.css'
+import './assets/css/theme/index.css'
+
 
 import App from './App.vue'
 import router from './router'
