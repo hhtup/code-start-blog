@@ -13,8 +13,8 @@
 </template>
 
 <script lang="ts" setup name="HomeView">
-  import UserInfoCard from '@/views/UserInfoCard.vue';
-  import ArticleList from '@/views/ArticleList.vue';
+  import UserInfoCard from '@/components/AsideBox/UserInfoCard.vue';
+  import ArticleList from '@/components/ArticleList.vue';
 
 </script>
 

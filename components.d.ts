@@ -10,6 +10,7 @@ declare module 'vue' {
     Aboout: typeof import('./src/components/Aboout.vue')['default']
     AbooutView: typeof import('./src/components/AbooutView.vue')['default']
     AboutView: typeof import('./src/components/AboutView.vue')['default']
+    ArticleList: typeof import('./src/components/ArticleList.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElButton: typeof import('element-plus/es')['ElButton']
@@ -31,10 +32,12 @@ declare module 'vue' {
     ElText: typeof import('element-plus/es')['ElText']
     Home: typeof import('./src/components/Home.vue')['default']
     HomeView: typeof import('./src/components/HomeView.vue')['default']
+    IndexHeader: typeof import('./src/components/IndexHeader.vue')['default']
     LoginView: typeof import('./src/components/LoginView.vue')['default']
     PageIndex: typeof import('./src/components/PageIndex.vue')['default']
     RegisterView: typeof import('./src/components/RegisterView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    UserInfoCard: typeof import('./src/components/AsideBox/UserInfoCard.vue')['default']
   }
 }
