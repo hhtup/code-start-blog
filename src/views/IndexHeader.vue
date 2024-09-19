@@ -22,8 +22,6 @@
             <el-menu-item index="4" key="">
                 <router-link to="/register">注册</router-link>
             </el-menu-item>
-            <!-- <el-menu-item index="" key=""> -->
-            <!-- </el-menu-item> -->
         </div>
     </el-menu>
 </template>
@@ -34,10 +32,8 @@ import { useColorMode } from '@vueuse/core'
 const theme = ref(false);
 const colorMode = useColorMode()
 const handleSelect = (key: string, keyPath: string[]) => {
-//   console.log(key, keyPath)
 }
 function changeTheme() {
-    console.log(colorMode.value)
     colorMode.value = theme.value === false ? 'light' : 'dark'
 }
 </script>
@@ -49,9 +45,11 @@ function changeTheme() {
     display: flex;
     justify-content: space-between;
 }
+.el-menu :deep(.el-menu-item:hover)  {
+    background-color: var(--nav--hover--bg--color);
+ }
 .router-link-active {
   text-decoration: none;
-  /* color: yellow; */
 }
 .el-menu-item a {
   text-decoration: none;

@@ -1,19 +1,41 @@
 <template>
     <el-space fill direction='vertical' :fill-ratio="100" style="width: 100%">
-        <div class="line" v-for="(item, index) in 5" :key="index">
+        <div class="line" v-for="(item, index) in 3" :key="index">
             <div class="article-introduction">
                 <h2>标题 {{ item }}</h2>
                 <p>内容</p>
             </div>
             <div class="article-image">
-                <img src="https://s21.ax1x.com/2024/09/10/pAm2OWn.png">
+                <!-- <img :src='imageSrc'> -->
+                <el-skeleton style="width: 220px" :loading="false" animated>
+                    <template #default>
+                        <el-skeleton-item variant="image" style="width: 220px; height: 220px" />
+                    </template>
+                </el-skeleton>
             </div>
         </div>
     </el-space>
 </template>
 
 <script lang="ts" setup name="ArticleList">
-    import { ref } from 'vue'
+    import axios from 'axios';
+    import { ref, onMounted } from 'vue';
+
+    const imageSrc = ref('');
+
+    const loadImage = async () => {
+        const imageUrl = 'https://api.uomg.com/api/rand.img3?sort=七了个三&format=json';
+        try {
+            const response = await axios(imageUrl);
+            imageSrc.value = response.data.imgurl;
+        } catch (error) {
+            console.error('Error loading image:', error);
+        }
+    };
+    
+    onMounted(()=>{
+        loadImage();
+    })
 </script>
 
 <style scoped>

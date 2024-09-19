@@ -2,7 +2,7 @@
   <div class="user-info-card">
     <el-card>
         <template #header >
-            <el-avatar size="large" src="https://s21.ax1x.com/2024/09/10/pAm2LJs.png" fit="fill"></el-avatar>
+            <el-avatar size="large" src="https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg" fit="fill"></el-avatar>
             <el-text>username</el-text>
         </template>
         <div>
@@ -19,7 +19,22 @@
 </template>
 
 <script lang="ts" setup name="UserInfoCard">
-    
+    import axios from 'axios';
+    import { ref, onMounted } from 'vue'
+    const avatarSrc = ref('')
+    const getAvatarSrc = async () => {
+        const imageUrl = 'https://api.uomg.com/api/rand.img3?sort=七了个三&format=json';
+        try {
+            const response = await axios(imageUrl);
+            console.log(response);
+            avatarSrc.value = response.data.imgurl;
+        } catch (error) {
+            console.error('Error loading image:', error);
+        }
+    }
+    onMounted(() => {
+        getAvatarSrc();
+    })
 </script>
 
 <style scoped>

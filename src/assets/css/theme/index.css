@@ -9,6 +9,8 @@
     --nav--bg--color: #F6F8FA;
     /* 顶部导航栏字体颜色 */
     --nav--font--color: #1e1e1e;
+    /* 顶部导航栏hover状态背景颜色 */
+    --nav--hover--bg--color: #898C94;
     /* 侧边栏的背景颜色 */
     --aside--bar--bg--color: var(--main--bg--color);
     /* 侧边栏字体颜色 */
@@ -34,6 +36,8 @@
     --nav--bg--color: #003460;
     /* 顶部导航栏字体颜色 */
     --nav--font--color: #F6F8FA;
+    /* 顶部导航栏hover状态背景颜色 */
+    --nav--hover--bg--color: #bfbfbf;
     /* 侧边栏的背景颜色 */
     --aside--bar--bg--color: var(--main--bg--color);
     /* 侧边栏字体颜色 */
