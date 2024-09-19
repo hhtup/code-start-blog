@@ -3,6 +3,8 @@
       <!-- 内容展示 -->
       <div class="main">
         <ArticleList></ArticleList>
+        <el-button type="primary" size="default" @click="addArticle">跳转</el-button>
+        
       </div>
       <!-- 侧边栏 -->
        <div class="aside">
@@ -16,6 +18,11 @@
   import UserInfoCard from '@/components/AsideBox/UserInfoCard.vue';
   import ArticleList from '@/components/ArticleList.vue';
 
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
+  function addArticle() {
+    router.push('/editor');
+  }
 </script>
 
 <style scoped>

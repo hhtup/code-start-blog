@@ -4,6 +4,7 @@ import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import RegisterView from '@/views/RegisterView.vue'
 import AboutView from '@/views/AboutView.vue'
+import MarkdownEditor from '@/views/MarkdownEditor.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +24,11 @@ const router = createRouter({
           path: 'about',
           name: 'about',
           component: AboutView
+        },
+        {
+          path: '/editor',
+          name: 'markdownEditor',
+          component: MarkdownEditor
         },
       ]
     },
