@@ -26,7 +26,7 @@ import IndexHeader from "@/components/IndexHeader.vue"
   padding: 20px;
 }
 .el-footer {
-  background-color: var(--footer--bg--color);
+  background: var(--footer--bg--color);
   color: var(--footer--font--color);
 }
 </style>

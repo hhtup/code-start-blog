@@ -43,9 +43,9 @@
     /* 侧边栏字体颜色 */
     --aside--bar--font--color: var(--main--font--color);
     /* 页面底栏背景颜色 */
-    --footer--bg--color: #ffadd2;
+    --footer--bg--color: #2c2f3b;
     /* 页面底栏字体颜色 */
-    --footer--font--color: #520339;
+    --footer--font--color: #00a381;
     /* 文章背景色 */
     --article--bg--color: #1D1D1D;
     /* 文章字体颜色 */
