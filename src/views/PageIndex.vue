@@ -15,6 +15,8 @@
 
 <script lang="ts" setup name="PageIndex">
 import IndexHeader from "@/components/IndexHeader.vue"
+
+
 </script>
 
 <style scoped>

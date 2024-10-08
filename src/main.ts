@@ -3,6 +3,7 @@ import { createPinia } from 'pinia'
 import './assets/css/global.css'
 // import 'element-plus/theme-chalk/dark/css-vars.css'
 import './assets/css/theme/index.css'
+import 'element-plus/dist/index.css'
 
 import VueMarkdownEditor from '@kangc/v-md-editor';
 import '@kangc/v-md-editor/lib/style/base-editor.css';

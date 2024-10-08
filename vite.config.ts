@@ -22,15 +22,15 @@ export default defineConfig({
       plugins: [], // 可选的插件
     }),
   ],
-  // server: {
-  //   proxy: {
-  //     '/a': {
-  //       target: 'https://api.uomg.com/api',
-  //       rewrite: (path) => path.replace(/^\/a/, ''),
-  //       changeOrigin: true
-  //     }
-  //   }
-  // },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3000/api/',
+        rewrite: (path) => path.replace(/^\/api/, ''),
+        changeOrigin: true
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
