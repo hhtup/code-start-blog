@@ -45,6 +45,7 @@
         text-align: center;
         background-color: var(--aside--bar--bg--color);
         color: var(--aside--bar--font--color);
+        min-width: 190px;
     }
     :deep(.el-card__header) {
         display: flex;

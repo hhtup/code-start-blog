@@ -37,13 +37,14 @@
     color: var(--main--font--color);
     text-align: center;
     max-width: 800px;
+    min-width: 400px;
     width:100%;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 0 12px rgb(0, 0, 0, 0.12);
   }
   .aside {
-    padding: 0 20px;
+    padding-left: 20px;
     max-width: 360px;
   }
 </style>
