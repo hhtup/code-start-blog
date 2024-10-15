@@ -39,6 +39,7 @@ declare module 'vue' {
     IndexHeader: typeof import('./src/components/IndexHeader.vue')['default']
     LoginView: typeof import('./src/components/LoginView.vue')['default']
     MarkdownEditor: typeof import('./src/components/MarkdownEditor.vue')['default']
+    MarkdownPreview: typeof import('./src/components/MarkdownPreview.vue')['default']
     PageIndex: typeof import('./src/components/PageIndex.vue')['default']
     RegisterView: typeof import('./src/components/RegisterView.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']

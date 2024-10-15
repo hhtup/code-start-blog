@@ -21,7 +21,9 @@
       <el-menu-item index="/login">登录</el-menu-item>
       <el-menu-item index="/register"> 注册 </el-menu-item>
       <el-sub-menu index="1">
-        <template #title>创作中心</template>
+        <template #title>
+          <span class="createCenter-title">创作中心</span>
+        </template>
         <el-menu-item index="/editor/article"> 写文章 </el-menu-item>
         <el-menu-item index="/editor/code"> 写代码 </el-menu-item>
         <el-menu-item index="/editor/drafts"> 草稿箱 </el-menu-item>
@@ -31,11 +33,19 @@
 </template>
 
 <script lang="ts" setup name="IndexHeader">
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { useColorMode } from "@vueuse/core";
+
 const theme = ref(false);
 const colorMode = useColorMode();
 const handleSelect = (key: string, keyPath: string[]) => {};
+
+onMounted(() => {
+  // 刷新页面时，主题滑块位置跟随本地主题
+  if (colorMode.value) {
+    theme.value = colorMode.value === "dark" ? true : false;
+  }
+});
 function changeTheme() {
   colorMode.value = theme.value === false ? "light" : "dark";
 }
@@ -54,8 +64,7 @@ function changeTheme() {
 .router-link-active {
   text-decoration: none;
 }
-.el-menu-item a {
-  text-decoration: none;
+.el-menu-item, .createCenter-title {
   color: var(--nav--font--color);
 }
 .el-menu > div {

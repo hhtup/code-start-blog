@@ -5,9 +5,8 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import  createPrismPlugin  from 'vite-plugin-prismjs';
+import prismjsPlugin from 'vite-plugin-prismjs';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
@@ -17,9 +16,9 @@ export default defineConfig({
     Components({
       resolvers: [ElementPlusResolver()],
     }),
-    createPrismPlugin({
-      languages: ['javascript', 'typescript', 'json'], // 需要支持的语言
-      plugins: [], // 可选的插件
+    prismjsPlugin ({
+      languages: 'all',
+      // plugins: ['line-numbers'], // 可选的插件
     }),
   ],
   server: {
@@ -36,7 +35,4 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  // optimizeDeps: {
-  //   include: ['@kangc/v-md-editor','@kangc/v-md-editor/lib/theme/vuepress.js'],
-  // },
 })

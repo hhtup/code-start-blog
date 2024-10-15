@@ -5,8 +5,12 @@ import './assets/css/global.css'
 import './assets/css/theme/index.css'
 import 'element-plus/dist/index.css'
 
-import VueMarkdownEditor from '@kangc/v-md-editor';
+import VMdEditor from '@kangc/v-md-editor';
 import '@kangc/v-md-editor/lib/style/base-editor.css';
+
+import VMdPreview from '@kangc/v-md-editor/lib/preview';
+import '@kangc/v-md-editor/lib/style/preview.css';
+
 import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js';
 import '@kangc/v-md-editor/lib/theme/style/vuepress.css';
 import prismjs from 'prismjs';
@@ -15,8 +19,8 @@ import App from './App.vue'
 import router from './router'
 const app = createApp(App)
 
-VueMarkdownEditor.use(vuepressTheme, {
-    prismjs,
+VMdEditor.use(vuepressTheme, {
+    Prism: prismjs,
     extend(md:any) {
         // md为 markdown-it 实例，可以在此处进行修改配置,并使用 plugin 进行语法扩展
         // md.set(option).use(plugin);
@@ -31,7 +35,12 @@ VueMarkdownEditor.use(vuepressTheme, {
     },
 });
 
-app.use(VueMarkdownEditor);
+VMdPreview.use(vuepressTheme, {
+    Prism: prismjs,
+});
+
+app.use(VMdEditor);
+app.use(VMdPreview)
 app.use(createPinia())
 app.use(router)
 
